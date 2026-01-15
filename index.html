@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>SwipeShow 文字テスト</title>
+  <title>SwipeShow 文字スライド</title>
 
   <!-- jQuery本体 -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -14,38 +14,53 @@
   <style>
     body {
       font-family: sans-serif;
+      margin: 20px;
     }
 
-    #swipeshow {
+    .swipeshow {
       width: 100%;
       height: 200px;
+      overflow: hidden;
+      border: 1px solid #ccc;
       background: #f2f2f2;
+    }
+
+    .slides {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
 
     .slide {
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       font-size: 24px;
       height: 200px;
+      width: 100%;
     }
   </style>
 </head>
 
 <body>
 
-<h1>SwipeShow テスト</h1>
+<h1>SwipeShow 文字スライド</h1>
 
-<div id="swipeshow">
-  <div class="slide">1ページ目</div>
-  <div class="slide">2ページ目</div>
-  <div class="slide">3ページ目</div>
+<!-- Swipeshow 本体 -->
+<div class="swipeshow">
+  <ul class="slides">
+    <li class="slide">1ページ目</li>
+    <li class="slide">2ページ目</li>
+    <li class="slide">3ページ目</li>
+  </ul>
 </div>
 
 <script>
   $(function(){
-    $('#swipeshow').swipeshow({
-      autoplay: false
+    $(".swipeshow").swipeshow({
+      autostart: false,
+      mouse: true,
+      keys: true
     });
   });
 </script>
