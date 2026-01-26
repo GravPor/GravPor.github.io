@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>
+    {% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- PicoCSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1 style="margin-bottom: .25rem;">
+        <a href="{{ "/" | relative_url }}" style="text-decoration:none; color:inherit;">
+          {{ site.title }}
+        </a>
+      </h1>
+      <p style="margin-top: 0;">{{ site.description }}</p>
+
+      <nav>
+        <ul>
+          <li><a href="{{ "/" | relative_url }}">Home</a></li>
+          <li><a href="{{ "/blog/" | relative_url }}">Blog</a></li>
+          <li><a href="{{ "/memo/" | relative_url }}">Memos</a></li>
+          <li><a href="{{ "/spec/" | relative_url }}">Specs</a></li>
+        </ul>
+      </nav>
+      <hr>
+    </header>
+
+    {{ content }}
+
+    <footer>
+      <hr>
+      <small>© {{ site.title }}</small>
+    </footer>
+  </main>
+</body>
+</html>
