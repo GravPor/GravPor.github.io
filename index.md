@@ -5,9 +5,9 @@ title: Home
 
 ## ここは何？
 
+- **Game**：作ったゲーム
 - **Blog**：日記・進捗・記事
 - **Memos**：思いつき・小ネタ
-- **Specs**：ゲーム仕様書・設計メモ
 
 ---
 
@@ -24,15 +24,6 @@ title: Home
 ## 最新メモ（5件）
 <ul>
 {% for p in site.memos limit:5 %}
-  <li>
-    <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
-  </li>
-{% endfor %}
-</ul>
-
-## 仕様書（5件）
-<ul>
-{% for p in site.specs limit:5 %}
   <li>
     <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
   </li>
