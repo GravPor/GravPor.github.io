@@ -1,13 +1,13 @@
-title: My Dev Site
-description: Blog / Memos / Game Specs (Markdown + PicoCSS)
+title: GravPor
+description: Games / Blog / Memo
 theme: null
 markdown: kramdown
 permalink: pretty
 
 collections:
-  memos:
+  blog:
     output: true
-    permalink: /memos/:name/
-  specs:
+    permalink: /blog/:name/
+  memo:
     output: true
-    permalink: /specs/:name/
+    permalink: /memo/:name/
