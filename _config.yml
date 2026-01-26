@@ -1,0 +1,13 @@
+title: My Dev Site
+description: Blog / Memos / Game Specs (Markdown + PicoCSS)
+theme: null
+markdown: kramdown
+permalink: pretty
+
+collections:
+  memos:
+    output: true
+    permalink: /memos/:name/
+  specs:
+    output: true
+    permalink: /specs/:name/
