@@ -38,6 +38,7 @@ footer {
 
 .memo-wrapper {
   overflow: hidden;
+  min-height: 100dvh;
 }
 
 .memo-slider {
