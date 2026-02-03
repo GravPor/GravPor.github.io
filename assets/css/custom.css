@@ -15,3 +15,31 @@ footer {
   text-align: center;
   opacity: 0.6;
 }
+
+.memo-wrapper {
+  overflow: hidden;
+}
+
+.memo-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.memo-slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  padding: 1rem;
+}
+
+.memo-slide article {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.memo-slide img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
