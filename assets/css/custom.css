@@ -40,9 +40,11 @@ footer {
 }
 
 .memo-slide img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 1rem;
+  max-width: 75%;
+  max-height: 35vh;
+  object-fit: contain;
+  display: block;
+  margin: 0.75rem auto 1rem;
 }
 
 .memo-slider::-webkit-scrollbar {
