@@ -1,0 +1,17 @@
+nav {
+  margin-bottom: 2rem;
+}
+
+article {
+  margin-bottom: 2rem;
+}
+
+img {
+  border-radius: 8px;
+}
+
+footer {
+  margin-top: 4rem;
+  text-align: center;
+  opacity: 0.6;
+}

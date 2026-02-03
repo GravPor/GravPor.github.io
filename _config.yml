@@ -1,13 +1,15 @@
 title: GravPor
-description: Game / Blog / Memo
+description: 個人ゲーム制作と日記とメモ
 theme: null
+
 markdown: kramdown
-permalink: pretty
+permalink: /:categories/:title/
 
 collections:
-  blog:
+  pages:
     output: true
-    permalink: /blog/:name/
+
+collections:
   memo:
     output: true
     permalink: /memo/:name/

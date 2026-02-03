@@ -1,15 +1,13 @@
 ---
-layout: default
+layout: page
 title: Blog
-permalink: /blog/
 ---
 
-## 記事一覧
-<ul>
 {% for post in site.posts %}
-  <li>
-    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    <small>({{ post.date | date: "%Y-%m-%d" }})</small>
-  </li>
+<article>
+  <h4>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </h4>
+  <small>{{ post.date | date: "%Y-%m-%d" }}</small>
+</article>
 {% endfor %}
-</ul>
