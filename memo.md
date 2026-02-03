@@ -1,8 +1,23 @@
 ---
-layout: page
-title: Memo
+layout: default
 ---
 
-## 2026-02-04
+<div class="memo-wrapper">
 
-- iPhoneで画像を加工するの好き
+  <div class="memo-slider">
+
+    {% assign memos = site.memo | sort: "date" | reverse %}
+    {% for memo in memos %}
+      <section class="memo-slide">
+        <article>
+          <h3>{{ memo.title }}</h3>
+          <small>{{ memo.date | date: "%Y-%m-%d" }}</small>
+
+          {{ memo.content }}
+        </article>
+      </section>
+    {% endfor %}
+
+  </div>
+
+</div>
