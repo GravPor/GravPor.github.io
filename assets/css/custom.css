@@ -31,6 +31,7 @@ footer {
   flex: 0 0 100%;
   scroll-snap-align: start;
   padding: 1rem;
+  box-shadow: inset -10px 0 20px -20px rgba(0,0,0,0.3);
 }
 
 .memo-slide article {
@@ -42,4 +43,8 @@ footer {
   width: 100%;
   border-radius: 8px;
   margin-bottom: 1rem;
+}
+
+.memo-slider::-webkit-scrollbar {
+  display: none;
 }
