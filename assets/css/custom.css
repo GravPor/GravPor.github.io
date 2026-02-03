@@ -1,3 +1,7 @@
+main.container {
+  min-height: 100dvh;
+}
+
 nav {
   margin-bottom: 2rem;
 }
