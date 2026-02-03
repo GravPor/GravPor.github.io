@@ -1,14 +1,8 @@
 ---
-layout: default
+layout: page
 title: Memo
-permalink: /memo/
 ---
 
-## メモ一覧
-<ul>
-{% for p in site.memo %}
-  <li>
-    <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
-  </li>
-{% endfor %}
-</ul>
+## 2026-02-04
+
+- iPhoneで画像を加工するの好き
