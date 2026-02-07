@@ -4,6 +4,7 @@ theme: null
 
 markdown: kramdown
 permalink: /:categories/:title/
+future: true
 
 collections:
   pages:
