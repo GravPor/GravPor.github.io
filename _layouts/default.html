@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta charset="utf-8">
+  <title>{{ page.title }} | {{ site.title }}</title>
+
+  <!-- Pico.css -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+  >
+
+  <link rel="stylesheet" href="/assets/css/custom.css">
+</head>
+
+<body>
+<main class="container">
+
+  <nav>
+    <ul>
+      <li><strong>{{ site.title }}</strong></li>
+    </ul>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/game">Game</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/memo">Memo</a></li>
+    </ul>
+  </nav>
+
+  {{ content }}
+
+  <footer>
+    <small>© GravPor</small>
+  </footer>
+
+</main>
+</body>
+</html>

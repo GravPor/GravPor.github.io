@@ -1,0 +1,15 @@
+title: GravPor
+description: 個人ゲーム制作と日記とメモ
+theme: null
+
+markdown: kramdown
+permalink: /:categories/:title/
+
+collections:
+  pages:
+    output: true
+
+collections:
+  memo:
+    output: true
+    permalink: /memo/:name/
