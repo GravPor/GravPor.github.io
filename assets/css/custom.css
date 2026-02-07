@@ -46,6 +46,15 @@ footer {
 }
 
 .memo-slider {
+  transform: none !important;
+}
+.memo-slide {
+  position: static !important;
+}
+
+/*
+
+.memo-slider {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -58,6 +67,8 @@ footer {
   padding: 1rem;
   box-shadow: inset -10px 0 20px -20px rgba(0,0,0,0.3);
 }
+
+*/
 
 .memo-slide article {
   max-width: 600px;
