@@ -5,7 +5,7 @@ layout: default
 <div class="memo-wrapper">
   <div class="memo-slider">
 
-    {% assign memos = site.memo | sort: "date" | reverse %}
+    {% assign memos = site.memo | sort: "order" | reverse %}
     {% for memo in memos %}
       <section class="memo-slide">
         <article>
