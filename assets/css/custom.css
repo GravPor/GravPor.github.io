@@ -46,34 +46,37 @@ footer {
 }
 
 /* =========================
-   memo 表示（縦スクロール版）
+   memo 横スワイプスライダー
    ========================= */
 
-/* wrapper は隠さない（重要） */
+/* 画面外を隠す（横スライド用） */
 .memo-wrapper {
-  overflow: visible;
-  min-height: auto;
+  overflow: hidden;
+  min-height: 100dvh;
 }
 
-/* スライダー機能は完全に無効化 */
+/* 横並び＋スナップ */
 .memo-slider {
-  transform: none;
-  display: block;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
-/* 各 memo を縦に自然配置 */
+/* 1枚 = 1画面 */
 .memo-slide {
-  position: static;
-  padding: 1rem 0;
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  padding: 1rem;
 }
 
-/* memo 本文の見た目 */
+/* memo本文の幅 */
 .memo-slide article {
   max-width: 600px;
   margin: 0 auto;
 }
 
-/* 画像のサイズ調整 */
+/* 画像サイズ調整 */
 .memo-slide img {
   max-width: 75%;
   max-height: 35vh;
@@ -82,7 +85,7 @@ footer {
   margin: 0.75rem auto 1rem;
 }
 
-/* スクロールバー非表示（不要なので無効化） */
+/* スクロールバー非表示 */
 .memo-slider::-webkit-scrollbar {
   display: none;
 }
