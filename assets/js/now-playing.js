@@ -21,7 +21,11 @@ function updateNowPlaying() {
 
       root.style.display = "flex";
       title.textContent  = track.name;
-      artist.textContent = track.artist['#text'];
+artist.textContent = track.artist['#text'];
+
+if (!now) {
+  artist.textContent += "（recent）";
+}
 
       const images = track.image;
       const img = images.find(i => i.size === "medium") || images[0];
