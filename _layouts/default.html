@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>{{ page.title }} | {{ site.title }}</title>
 
+  <!-- Pico.css -->
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
@@ -30,32 +31,12 @@
 
   {{ content }}
 
-  <footer>
-    <div id="now-playing" class="now-playing">
-      🎧 not playing
-    </div>
-    <small>© GravPor</small>
-  </footer>
+  {% include footer.html %}
 
 </main>
 
-<script>
-  const user = "daifukudo";
-  const apiKey = "12add71e885b32312fe5957f983f71e4";
-
-  const el = document.getElementById("now-playing");
-
-  fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${user}&api_key=${apiKey}&format=json&limit=1`)
-    .then(res => res.json())
-    .then(data => {
-      const track = data.recenttracks.track[0];
-      const now = track['@attr']?.nowplaying;
-
-      if (now && el) {
-        el.innerText = `🎧 Now Playing: ${track.name} – ${track.artist['#text']}`;
-      }
-    });
-</script>
+<!-- Now Playing JS -->
+<script src="/assets/js/now-playing.js"></script>
 
 </body>
 </html>
