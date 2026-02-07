@@ -3,7 +3,7 @@ description: 個人ゲーム制作と日記とメモ
 theme: null
 
 markdown: kramdown
-permalink: /:categories/:title/
+#permalink: /:categories/:title/
 future: true
 
 collections:
