@@ -1,5 +1,5 @@
 /* =========================
-   iOS Safari / 全体
+   iOS Safari 対策：画面全体
    ========================= */
 
 html, body {
@@ -45,36 +45,32 @@ footer {
 }
 
 /* =========================
-   memo 横スワイプ（完成形）
+   memo 横スライド（元の形式）
    ========================= */
 
+/* 画面外を隠す */
 .memo-wrapper {
   overflow: hidden;
   min-height: 100dvh;
 }
 
-/* 横スクロールの本体 */
+/* 横スクロール本体 */
 .memo-slider {
   display: flex;
-  flex-direction: row;
   overflow-x: auto;
-  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-
-  /* ★重要：横に伸びる余地を保証 */
-  width: 100vw;
 }
 
-/* 1枚 = 画面幅 */
+/* 1枚 = 1画面 */
 .memo-slide {
-  flex: 0 0 100vw;      /* ★100% ではなく 100vw */
+  flex: 0 0 100%;
   scroll-snap-align: start;
   padding: 1rem;
   box-sizing: border-box;
 }
 
-/* memo 本文 */
+/* memo本文 */
 .memo-slide article {
   max-width: 600px;
   margin: 0 auto;
