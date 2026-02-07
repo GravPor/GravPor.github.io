@@ -1,5 +1,5 @@
 /* =========================
-   iOS Safari 対策：画面全体
+   iOS Safari / 全体
    ========================= */
 
 html, body {
@@ -22,7 +22,6 @@ main.container {
   flex-direction: column;
 }
 
-/* footer を下に押し出す */
 main.container > footer {
   margin-top: auto;
 }
@@ -46,37 +45,42 @@ footer {
 }
 
 /* =========================
-   memo 横スワイプスライダー
+   memo 横スワイプ（完成形）
    ========================= */
 
-/* 画面外を隠す（横スライド用） */
 .memo-wrapper {
   overflow: hidden;
   min-height: 100dvh;
 }
 
-/* 横並び＋スナップ */
+/* 横スクロールの本体 */
 .memo-slider {
   display: flex;
+  flex-direction: row;
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
+
+  /* ★重要：横に伸びる余地を保証 */
+  width: 100vw;
 }
 
-/* 1枚 = 1画面 */
+/* 1枚 = 画面幅 */
 .memo-slide {
-  flex: 0 0 100%;
+  flex: 0 0 100vw;      /* ★100% ではなく 100vw */
   scroll-snap-align: start;
   padding: 1rem;
+  box-sizing: border-box;
 }
 
-/* memo本文の幅 */
+/* memo 本文 */
 .memo-slide article {
   max-width: 600px;
   margin: 0 auto;
 }
 
-/* 画像サイズ調整 */
+/* 画像 */
 .memo-slide img {
   max-width: 75%;
   max-height: 35vh;
