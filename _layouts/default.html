@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta charset="utf-8">
   <title>{{ page.title }} | {{ site.title }}</title>
 
   <!-- Pico.css -->
@@ -10,8 +10,8 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
   >
+
   <link rel="stylesheet" href="/assets/css/custom.css">
-  {% include head.html %}
 </head>
 
 <body>
@@ -31,12 +31,10 @@
 
   {{ content }}
 
-  {% include footer.html %}
+  <footer>
+    <small>© GravPor</small>
+  </footer>
 
 </main>
-
-<!-- Now Playing JS -->
-<script src="/assets/js/now-playing.js"></script>
-
 </body>
 </html>
