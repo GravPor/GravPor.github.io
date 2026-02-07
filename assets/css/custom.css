@@ -1,4 +1,7 @@
-/* iOS Safari 対策：画面全体を埋める */
+/* =========================
+   iOS Safari 対策：画面全体
+   ========================= */
+
 html, body {
   margin: 0;
   padding: 0;
@@ -9,7 +12,9 @@ body {
   min-height: 100dvh;
 }
 
-/* Pico.css の container 対策 */
+/* =========================
+   Pico.css container 対策
+   ========================= */
 
 main.container {
   min-height: 100dvh;
@@ -40,41 +45,35 @@ footer {
   opacity: 0.6;
 }
 
+/* =========================
+   memo 表示（縦スクロール版）
+   ========================= */
+
+/* wrapper は隠さない（重要） */
 .memo-wrapper {
-  overflow: hidden;
-  min-height: 100dvh;
+  overflow: visible;
+  min-height: auto;
 }
 
+/* スライダー機能は完全に無効化 */
 .memo-slider {
-  transform: none !important;
+  transform: none;
+  display: block;
 }
+
+/* 各 memo を縦に自然配置 */
 .memo-slide {
-  position: static !important;
+  position: static;
+  padding: 1rem 0;
 }
 
-/*
-
-.memo-slider {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-}
-
-.memo-slide {
-  flex: 0 0 100%;
-  scroll-snap-align: start;
-  padding: 1rem;
-  box-shadow: inset -10px 0 20px -20px rgba(0,0,0,0.3);
-}
-
-*/
-
+/* memo 本文の見た目 */
 .memo-slide article {
   max-width: 600px;
   margin: 0 auto;
 }
 
+/* 画像のサイズ調整 */
 .memo-slide img {
   max-width: 75%;
   max-height: 35vh;
@@ -83,22 +82,7 @@ footer {
   margin: 0.75rem auto 1rem;
 }
 
+/* スクロールバー非表示（不要なので無効化） */
 .memo-slider::-webkit-scrollbar {
   display: none;
-}
-
-/* =========================
-   iOS Safari 全ページ白対策
-   ========================= */
-
-/* ページ全体の基準 */
-html, body {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
-}
-
-/* iOSの実際の画面高さを使う */
-body {
-  min-height: 100dvh;
 }
