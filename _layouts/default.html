@@ -5,12 +5,10 @@
   <meta charset="utf-8">
   <title>{{ page.title }} | {{ site.title }}</title>
 
-  <!-- Pico.css -->
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
   >
-
   <link rel="stylesheet" href="/assets/css/custom.css">
   {% include head.html %}
 </head>
@@ -33,9 +31,31 @@
   {{ content }}
 
   <footer>
+    <div id="now-playing" class="now-playing">
+      🎧 not playing
+    </div>
     <small>© GravPor</small>
   </footer>
 
 </main>
+
+<script>
+  const user = "daifukudo";
+  const apiKey = "12add71e885b32312fe5957f983f71e4";
+
+  const el = document.getElementById("now-playing");
+
+  fetch(`https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${user}&api_key=${apiKey}&format=json&limit=1`)
+    .then(res => res.json())
+    .then(data => {
+      const track = data.recenttracks.track[0];
+      const now = track['@attr']?.nowplaying;
+
+      if (now && el) {
+        el.innerText = `🎧 Now Playing: ${track.name} – ${track.artist['#text']}`;
+      }
+    });
+</script>
+
 </body>
 </html>
