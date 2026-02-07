@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<h1>debug memo</h1>
+
+<ul style="background:#fee; padding:16px;">
+{% for memo in site.memo %}
+  <li style="margin-bottom:8px;">
+    {{ memo.date }} / {{ memo.title }}
+  </li>
+{% endfor %}
+</ul>
